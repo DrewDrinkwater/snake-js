@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: black;
+      }
+
+      #game-board {
+        background-color: #ccc;
+        width: 80vmin;
+        height: 80vmin;
+        display: grid;
+        grid-template-rows: repeat(21, 1fr);
+        grid-template-columns: repeat(21, 1fr);
+      }
+
+      .snake {
+        background-color: hsl(117, 100%, 50%);
+        border: 0.25vmin solid black;
+      }
+
+      .food {
+        background-color: hsl(50, 100%, 50%);
+        border: 0.25vmin solid black;
+      }
+
+      .valium {
+        background-color: hsl(0, 100%, 50%);
+        border: 0.25vmin solid black;
+      }
+
+      .output,
+      .button-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .output div {
+        width: 15vw;
+        background-color: blueviolet;
+        border-radius: 25px;
+        padding: 5px 30px;
+        margin: 0px 10px 5px;
+        color: chartreuse;
+      }
+
+      .button-bar button {
+        width: 15vw;
+        height: 10vh;
+        background-color: blue;
+        border-radius: 25px;
+        padding: 5px 30px;
+        margin: 5px 10px 0px;
+        color: yellow;
+        font-weight: bold;
+        font-size: larger;
+      }
+    </style>
+    <script src="game.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="output">
+      <div>Speed:<span id="speed"></span></div>
+      <div>Score:<span id="score"></span></div>
+      <div>TSE:<span id="tse"></span></div>
+    </div>
+    <div id="game-board"></div>
+
+    <div id="button-bar" class="button-bar">
+      <button id="Left">&larr;</button>
+      <button id="Up">&uarr;</button>
+      <button id="Down">&darr;</button>
+      <button id="Right">&rarr;</button>
+    </div>
+  </body>
+</html>
