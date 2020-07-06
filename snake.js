@@ -39,11 +39,15 @@ export function update() {
 }
 
 export function draw(gameBoard) {
+  const greenStep = Math.round(255 / snakeBody.length);
+  let curRed = 0;
   snakeBody.forEach((segment) => {
     const snakeElement = document.createElement("div");
     snakeElement.style.gridRowStart = segment.y;
     snakeElement.style.gridColumnStart = segment.x;
     snakeElement.classList.add("snake");
+    snakeElement.style.backgroundColor = `rgba(${curRed}, 255, 123, 1)`;
+    curRed += greenStep;
     gameBoard.appendChild(snakeElement);
   });
 }

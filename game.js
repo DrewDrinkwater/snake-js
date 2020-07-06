@@ -10,7 +10,7 @@ import {
 
 import { update as updateFood, draw as drawFood } from "./food.js";
 import { update as updateValium, draw as drawValium } from "./valium.js";
-import { outsideGrid } from "./grid.js";
+import { outsideGrid, initialiseGrid } from "./grid.js";
 import { getScoresFromDisk, displayHighScores } from "./scores.js";
 import { playerName, getPlayerName } from "./player.js";
 import { is_touch_device, addClickHandle } from "./input.js";
@@ -46,6 +46,7 @@ function main(currentTime) {
 
 getPlayerName();
 getScoresFromDisk();
+initialiseGrid();
 window.requestAnimationFrame(main);
 addClickHandle(buttonBar);
 

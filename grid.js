@@ -1,4 +1,10 @@
-const GRID_SIZE = 20;
+const GRID_SIZE = 30;
+
+export function initialiseGrid() {
+  const globalSettings = document.querySelector("html");
+  globalSettings.style.setProperty("--grid-cells", GRID_SIZE);
+}
+
 export function randomGridPosition() {
   return {
     x: Math.floor(Math.random() * GRID_SIZE) + 1,
