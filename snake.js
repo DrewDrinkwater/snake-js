@@ -2,18 +2,18 @@ import { getInputDirection } from "./input.js";
 
 export let SNAKE_SPEED = 4;
 export let GAME_SCORE = 0;
+export let timeSinceEaten = 0;
 
 let newSegments = 0;
-export let timeSinceEaten = 0;
 
 const snakeBody = [{ x: 11, y: 11 }];
 
 export function resetTimeSinceEaten() {
-    timeSinceEaten = 0;
+  timeSinceEaten = 0;
 }
 
 export function slowSnake(REDUCTION_FACTOR) {
-    SNAKE_SPEED = SNAKE_SPEED / REDUCTION_FACTOR;
+  SNAKE_SPEED = SNAKE_SPEED / REDUCTION_FACTOR;
 }
 
 export function update() {
