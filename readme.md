@@ -1,8 +1,11 @@
-http://snake.drewdrinkwater.com
+Latest version should be hosted here: http://snake.drewdrinkwater.com
+
+Started out by watch WebDev video on snake game in JS and HTML.
 
 To Do
 
-Fix first time load of scores
-controls on phone browser
+Fix first time load of scores if someone clicks cancel on name.
 
-central score
+Better sizing and controls on phone browser.
+
+Central score rather than Local.
