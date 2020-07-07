@@ -22,8 +22,8 @@ let showButtons = is_touch_device();
 
 const gameBoard = document.getElementById("game-board");
 const score = document.getElementById("score");
-const speed = document.getElementById("speed");
-const tse = document.getElementById("tse");
+const speed = document.getElementById("speed-meter");
+const tse = document.getElementById("hunger-meter");
 const buttonBar = document.getElementById("button-bar");
 
 function main(currentTime) {
@@ -62,9 +62,9 @@ function draw() {
   drawFood(gameBoard);
   drawValium(gameBoard);
   drawSnake(gameBoard);
-  speed.innerHTML = Math.round(SNAKE_SPEED * 100) / 100;
+  speed.value = SNAKE_SPEED * 4;
   score.innerHTML = GAME_SCORE;
-  tse.innerHTML = timeSinceEaten;
+  tse.value = timeSinceEaten;
 }
 
 function checkDeath() {
